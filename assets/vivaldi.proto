@@ -27,11 +27,11 @@ message DetailedCallData {
 
 message ConversationMetadata {
   repeated Utterance alternatives = 1;
-  bool areSlotsFilled = 2;
-  bool areSlotsReused = 3;
+  bool are_slots_filled = 2;
+  bool are_slots_reused = 3;
   string asr_provider = 4;
   string expected_format = 5;
-  bool isAmbiguous = 6;
+  bool is_ambiguous = 6;
   string language = 7;
   string predicted_intent = 8;
   string trigger_alisas = 9;
