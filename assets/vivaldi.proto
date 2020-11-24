@@ -1,0 +1,64 @@
+syntax = "proto3";
+
+// Detailed call data for analysing calls
+message DetailedCallData {
+  string conv_id = 1;
+  string conv_created_at = 2;
+  string conv_uuid = 3;
+  string conv_type = 4;
+  string conv_sub_type = 5;
+  string text = 6;
+  string audio_base_path = 7;
+  string audio_identifier = 8;
+  string conv_state = 9;
+  string conv_context = 10;
+  ConversationMetadata conv_metadata = 11;
+  string call_id = 12;
+  Prediction prediction = 13;
+  string call_created_at = 14;
+  string call_uuid = 15;
+  string caller_number = 16;
+  string virtual_number = 17;
+  string call_state = 18;
+  string call_metadata = 19;
+  RetryMetadata retry_metadata = 20;
+  string flow_version = 21;
+}
+
+message ConversationMetadata {
+  repeated Utterance alternatives = 1;
+  bool areSlotsFilled = 2;
+  bool areSlotsReused = 3;
+  string asr_provider = 4;
+  string expected_format = 5;
+  bool isAmbiguous = 6;
+  string language = 7;
+  string predicted_intent = 8;
+  string trigger_alisas = 9;
+  string trigger_name = 10;
+}
+
+message Prediction {
+  repeated Intent intents = 1;
+}
+
+message Intent {
+  uint32 alternative_index = 1;
+  string name = 2;
+  float score = 3;
+}
+
+message RetryMetadata {
+  map<string, RetryInfo> retry_info = 1;
+  uint32 total_retries = 2;
+}
+
+message RetryInfo {
+  map<string, uint32> retry_count = 1;
+  uint32 total_retries = 2; 
+}
+
+message Utterance {
+  string transcript = 1;
+  float confidence = 2;
+}
