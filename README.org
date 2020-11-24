@@ -1,3 +1,5 @@
 #+TITLE: vivaldi
 
+[[https://img.shields.io/github/v/tag/Vernacular-ai/vivaldi.svg?style=flat-square]]
+
 Tools for working with VIVA data formats.
