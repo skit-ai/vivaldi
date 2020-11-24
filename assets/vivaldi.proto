@@ -1,5 +1,9 @@
 syntax = "proto3";
 
+// + Need documentation on what all of the fields and messages mean
+// + Need restructuring: From our side, we need to make a call dict that contains conversation info. Right now every conv info has all call data.
+// + there is a typo (alisas)
+
 // Detailed call data for analysing calls
 message DetailedCallData {
   string conv_id = 1;
