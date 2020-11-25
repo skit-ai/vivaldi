@@ -2,4 +2,9 @@
 
 [[https://img.shields.io/github/v/tag/Vernacular-ai/vivaldi.svg?style=flat-square]]
 
-Tools for working with VIVA data formats.
+Tools for working with VIVA data formats. Vivaldi provide types and transforms
+for call and turn data from our voice bot.
+
+Types specifying calls and turns, and few common functions are accessible in the
+~vivaldi~ python package. If you are developing in some language other than
+python, refer to the protobuf schema in ~./asserts/vivaldi.proto~.
