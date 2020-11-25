@@ -1,45 +1,46 @@
 syntax = "proto3";
 
-// + Need documentation on what all of the fields and messages mean
-// + Need restructuring: From our side, we need to make a call dict that contains conversation info. Right now every conv info has all call data.
-// + there is a typo (alisas)
+package vivaldi;
 
-// Detailed call data for analysing calls
-message DetailedCallData {
-  string conv_id = 1;
-  string conv_created_at = 2;
-  string conv_uuid = 3;
-  string conv_type = 4;
-  string conv_sub_type = 5;
-  string text = 6;
-  string audio_base_path = 7;
-  string audio_identifier = 8;
-  string conv_state = 9;
-  string conv_context = 10;
-  ConversationMetadata conv_metadata = 11;
-  string call_id = 12;
-  Prediction prediction = 13;
-  string call_created_at = 14;
-  string call_uuid = 15;
-  string caller_number = 16;
-  string virtual_number = 17;
-  string call_state = 18;
-  string call_metadata = 19;
-  RetryMetadata retry_metadata = 20;
-  string flow_version = 21;
+import "google/protobuf/any.proto";
+
+/* Representation of one full call */
+message Call {
+  uint32 id = 1;
+  string uuid = 2;
+  string created_at = 3;
+  string caller_number = 4;
+  string virtual_number = 5;  // Receiving phone number
+  string audio_base_path = 6;
+  string audio_identifier = 7;  // For full call audio
+  float duration = 8;
+  string flow_version = 9;
+  repeated Turn turns = 10;
 }
 
-message ConversationMetadata {
-  repeated Utterance alternatives = 1;
-  bool are_slots_filled = 2;
-  bool are_slots_reused = 3;
-  string asr_provider = 4;
-  string expected_format = 5;
-  bool is_ambiguous = 6;
-  string language = 7;
-  string predicted_intent = 8;
-  string trigger_alisas = 9;
-  string trigger_name = 10;
+/* One turn in the call. This can be a bot or user turn. */
+message Turn {
+  uint32 id = 1;
+  string uuid = 2;
+  string created_at = 3;
+  enum Type {
+    UNKNOWN = 0
+    ACTION = 1;
+    INPUT = 2;
+    RESPONSE = 3;
+    VALIDATION = 4;
+  }
+  Type type = 4;
+  string sub_type = 5;
+  string text = 6;
+  repeated Utterance utterances = 7;
+  string audio_base_path = 8;
+  string audio_identifier = 9;
+  string state = 10;
+  string asr_context = 11;
+  string asr_provider = 12;
+  string language = 13;
+  Prediction prediction = 14;
 }
 
 message Prediction {
@@ -47,22 +48,22 @@ message Prediction {
 }
 
 message Intent {
-  uint32 alternative_index = 1;
-  string name = 2;
-  float score = 3;
-}
-
-message RetryMetadata {
-  map<string, RetryInfo> retry_info = 1;
-  uint32 total_retries = 2;
-}
-
-message RetryInfo {
-  map<string, uint32> retry_count = 1;
-  uint32 total_retries = 2; 
+  string name = 1;
+  float score = 2;
+  message Slot {
+    string name = 1;
+    string type = 2;
+    repeated google.protobuf.Any values = 3;
+  }
+  repeated Slot slots = 3;
 }
 
 message Utterance {
-  string transcript = 1;
-  float confidence = 2;
+  message Alternative {
+    string transcript = 1;
+    float confidence = 2;
+    float am_score = 3;
+    float lm_score = 4;
+  }
+  repeated Alternative alternatives = 1;
 }
