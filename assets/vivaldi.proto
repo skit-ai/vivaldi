@@ -24,7 +24,7 @@ message Turn {
   string uuid = 2;
   string created_at = 3;
   enum Type {
-    UNKNOWN = 0
+    UNKNOWN = 0;
     ACTION = 1;
     INPUT = 2;
     RESPONSE = 3;
