@@ -43,7 +43,7 @@ builtin___int = int
 
 DESCRIPTOR: google___protobuf___descriptor___FileDescriptor = ...
 
-class Calls(google___protobuf___message___Message):
+class CallDataset(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
 
     @property
@@ -54,7 +54,7 @@ class Calls(google___protobuf___message___Message):
         calls : typing___Optional[typing___Iterable[type___Call]] = None,
         ) -> None: ...
     def ClearField(self, field_name: typing_extensions___Literal[u"calls",b"calls"]) -> None: ...
-type___Calls = Calls
+type___CallDataset = CallDataset
 
 class Call(google___protobuf___message___Message):
     DESCRIPTOR: google___protobuf___descriptor___Descriptor = ...
