@@ -2,7 +2,7 @@
 name = "vivaldi"
 version = "0.2.2"
 description = "Tools for working with VIVA data formats"
-authors = ["abhinav@vernacular.ai"]
+authors = ["Abhinav Tushar <abhinav@vernacular.ai>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
