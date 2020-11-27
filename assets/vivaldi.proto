@@ -4,6 +4,10 @@ package vivaldi;
 
 import "google/protobuf/any.proto";
 
+message Calls {
+  repeated Call calls = 1;
+}
+
 /* Representation of one full call */
 message Call {
   uint32 id = 1;
