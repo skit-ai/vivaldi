@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "vivaldi"
-version = "0.2.3"
+version = "0.2.4"
 description = "Tools for working with VIVA data formats"
 authors = ["Abhinav Tushar <abhinav@vernacular.ai>"]
 license = "MIT"
