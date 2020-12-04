@@ -9,4 +9,4 @@ Types specifying calls and turns, and few common functions are accessible in the
 ~vivaldi~ python package. Use ~pip install vivaldi~ for getting it.
 
 If you are developing in a language other than python, refer to the protobuf
-schema in ~./asserts/vivaldi.proto~.
+schema in ~./assets/vivaldi.proto~.
