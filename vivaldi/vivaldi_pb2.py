@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vivaldi',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\rvivaldi.proto\x12\x07vivaldi\x1a\x19google/protobuf/any.proto\"+\n\x0b\x43\x61llDataset\x12\x1c\n\x05\x63\x61lls\x18\x01 \x03(\x0b\x32\r.vivaldi.Call\"\xdc\x01\n\x04\x43\x61ll\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04uuid\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12\x15\n\rcaller_number\x18\x04 \x01(\t\x12\x16\n\x0evirtual_number\x18\x05 \x01(\t\x12\x17\n\x0f\x61udio_base_path\x18\x06 \x01(\t\x12\x18\n\x10\x61udio_identifier\x18\x07 \x01(\t\x12\x10\n\x08\x64uration\x18\x08 \x01(\x02\x12\x14\n\x0c\x66low_version\x18\t \x01(\t\x12\x1c\n\x05turns\x18\n \x03(\x0b\x32\r.vivaldi.Turn\"\x90\x03\n\x04Turn\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04uuid\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12 \n\x04type\x18\x04 \x01(\x0e\x32\x12.vivaldi.Turn.Type\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x0c\n\x04text\x18\x06 \x01(\t\x12&\n\nutterances\x18\x07 \x03(\x0b\x32\x12.vivaldi.Utterance\x12\x17\n\x0f\x61udio_base_path\x18\x08 \x01(\t\x12\x18\n\x10\x61udio_identifier\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x13\n\x0b\x61sr_context\x18\x0b \x01(\t\x12\x14\n\x0c\x61sr_provider\x18\x0c \x01(\t\x12\x10\n\x08language\x18\r \x01(\t\x12\'\n\nprediction\x18\x0e \x01(\x0b\x32\x13.vivaldi.Prediction\"H\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43TION\x10\x01\x12\t\n\x05INPUT\x10\x02\x12\x0c\n\x08RESPONSE\x10\x03\x12\x0e\n\nVALIDATION\x10\x04\".\n\nPrediction\x12 \n\x07intents\x18\x01 \x03(\x0b\x32\x0f.vivaldi.Intent\"\x94\x01\n\x06Intent\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05score\x18\x02 \x01(\x02\x12#\n\x05slots\x18\x03 \x03(\x0b\x32\x14.vivaldi.Intent.Slot\x1aH\n\x04Slot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12$\n\x06values\x18\x03 \x03(\x0b\x32\x14.google.protobuf.Any\"\x9c\x01\n\tUtterance\x12\x34\n\x0c\x61lternatives\x18\x01 \x03(\x0b\x32\x1e.vivaldi.Utterance.Alternative\x1aY\n\x0b\x41lternative\x12\x12\n\ntranscript\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x10\n\x08\x61m_score\x18\x03 \x01(\x02\x12\x10\n\x08lm_score\x18\x04 \x01(\x02\x62\x06proto3')
+  serialized_pb=_b('\n\rvivaldi.proto\x12\x07vivaldi\x1a\x19google/protobuf/any.proto\"+\n\x0b\x43\x61llDataset\x12\x1c\n\x05\x63\x61lls\x18\x01 \x03(\x0b\x32\r.vivaldi.Call\"\xf6\x01\n\x04\x43\x61ll\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04uuid\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12\x15\n\rcaller_number\x18\x04 \x01(\t\x12\x16\n\x0evirtual_number\x18\x05 \x01(\t\x12\x17\n\x0f\x61udio_base_path\x18\x06 \x01(\t\x12\x18\n\x10\x61udio_identifier\x18\x07 \x01(\t\x12\x10\n\x08\x64uration\x18\x08 \x01(\x02\x12\x14\n\x0c\x66low_version\x18\t \x01(\t\x12\x1c\n\x05turns\x18\n \x03(\x0b\x32\r.vivaldi.Turn\x12\x18\n\x10\x65xperiment_group\x18\x0b \x01(\t\"\xaa\x03\n\x04Turn\x12\n\n\x02id\x18\x01 \x01(\r\x12\x0c\n\x04uuid\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12 \n\x04type\x18\x04 \x01(\x0e\x32\x12.vivaldi.Turn.Type\x12\x10\n\x08sub_type\x18\x05 \x01(\t\x12\x0c\n\x04text\x18\x06 \x01(\t\x12&\n\nutterances\x18\x07 \x03(\x0b\x32\x12.vivaldi.Utterance\x12\x17\n\x0f\x61udio_base_path\x18\x08 \x01(\t\x12\x18\n\x10\x61udio_identifier\x18\t \x01(\t\x12\r\n\x05state\x18\n \x01(\t\x12\x13\n\x0b\x61sr_context\x18\x0b \x01(\t\x12\x14\n\x0c\x61sr_provider\x18\x0c \x01(\t\x12\x10\n\x08language\x18\r \x01(\t\x12\'\n\nprediction\x18\x0e \x01(\x0b\x32\x13.vivaldi.Prediction\x12\x18\n\x10\x65xperiment_group\x18\x0f \x01(\t\"H\n\x04Type\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43TION\x10\x01\x12\t\n\x05INPUT\x10\x02\x12\x0c\n\x08RESPONSE\x10\x03\x12\x0e\n\nVALIDATION\x10\x04\".\n\nPrediction\x12 \n\x07intents\x18\x01 \x03(\x0b\x32\x0f.vivaldi.Intent\"\x94\x01\n\x06Intent\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05score\x18\x02 \x01(\x02\x12#\n\x05slots\x18\x03 \x03(\x0b\x32\x14.vivaldi.Intent.Slot\x1aH\n\x04Slot\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04type\x18\x02 \x01(\t\x12$\n\x06values\x18\x03 \x03(\x0b\x32\x14.google.protobuf.Any\"\x9c\x01\n\tUtterance\x12\x34\n\x0c\x61lternatives\x18\x01 \x03(\x0b\x32\x1e.vivaldi.Utterance.Alternative\x1aY\n\x0b\x41lternative\x12\x12\n\ntranscript\x18\x01 \x01(\t\x12\x12\n\nconfidence\x18\x02 \x01(\x02\x12\x10\n\x08\x61m_score\x18\x03 \x01(\x02\x12\x10\n\x08lm_score\x18\x04 \x01(\x02\x62\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
@@ -56,8 +56,8 @@ _TURN_TYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=650,
-  serialized_end=722,
+  serialized_start=702,
+  serialized_end=774,
 )
 _sym_db.RegisterEnumDescriptor(_TURN_TYPE)
 
@@ -170,6 +170,13 @@ _CALL = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='experiment_group', full_name='vivaldi.Call.experiment_group', index=10,
+      number=11, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -183,7 +190,7 @@ _CALL = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=99,
-  serialized_end=319,
+  serialized_end=345,
 )
 
 
@@ -292,6 +299,13 @@ _TURN = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='experiment_group', full_name='vivaldi.Turn.experiment_group', index=14,
+      number=15, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -305,8 +319,8 @@ _TURN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=322,
-  serialized_end=722,
+  serialized_start=348,
+  serialized_end=774,
 )
 
 
@@ -336,8 +350,8 @@ _PREDICTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=724,
-  serialized_end=770,
+  serialized_start=776,
+  serialized_end=822,
 )
 
 
@@ -381,8 +395,8 @@ _INTENT_SLOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=849,
-  serialized_end=921,
+  serialized_start=901,
+  serialized_end=973,
 )
 
 _INTENT = _descriptor.Descriptor(
@@ -425,8 +439,8 @@ _INTENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=773,
-  serialized_end=921,
+  serialized_start=825,
+  serialized_end=973,
 )
 
 
@@ -477,8 +491,8 @@ _UTTERANCE_ALTERNATIVE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=991,
-  serialized_end=1080,
+  serialized_start=1043,
+  serialized_end=1132,
 )
 
 _UTTERANCE = _descriptor.Descriptor(
@@ -507,8 +521,8 @@ _UTTERANCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=924,
-  serialized_end=1080,
+  serialized_start=976,
+  serialized_end=1132,
 )
 
 _CALLDATASET.fields_by_name['calls'].message_type = _CALL

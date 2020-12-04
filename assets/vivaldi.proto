@@ -20,6 +20,9 @@ message Call {
   float duration = 8;
   string flow_version = 9;
   repeated Turn turns = 10;
+  string experiment_group = 11;  // Field experimentation group allocation
+                                 // information. Interpretation is left to the
+                                 // user as of now.
 }
 
 /* One turn in the call. This can be a bot or user turn. */
@@ -45,6 +48,9 @@ message Turn {
   string asr_provider = 12;
   string language = 13;
   Prediction prediction = 14;
+  string experiment_group = 15;  // Field experimentation group allocation
+                                 // information. Interpretation is left to the
+                                 // user as of now.
 }
 
 message Prediction {
